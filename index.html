@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biswas Sigdel - Resume</title>
+    <style>
+    body {
+        margin: 0;
+        background-color: #264653;
+        color: #212529;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        line-height: 1.6;
+    }
+    
+    .header {
+        display: flex;
+        align-items: center;
+        background-color: #f8f9fa;
+        border-bottom: 7px solid #f4a261;
+        padding: 20px 10%;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    
+    .header img {
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 4px solid #e9c46a;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        transition: all 0.3s ease;
+    }
+    
+    .header img:hover {
+        transform: scale(1.05);
+        background-color: #212529;
+    }
+    
+    .header h1 {
+        color: #2a9d8f;
+        margin: 0;
+        font-size: 2.2rem;
+        margin-left: 10px;
+    }
+    
+    .header hr {
+        border: none;
+        height: 3px;
+        background: #e9c46a;
+        margin: 10px 0;
+        width: 240px;
+    }
+    
+    .container {
+        width: 80%;
+        max-width: 900px;
+        margin: 50px auto;
+        background: #f8f9fa;
+        border-radius: 10px;
+        padding: 30px;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+    }
+    
+    .section {
+        padding: 20px;
+        margin-bottom: 25px;
+        border-radius: 8px;
+        background: white;
+        box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        transition: all 0.3s ease;
+    }
+    
+    .section:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    }
+    
+    .section-title {
+        background: #2a9d8f;
+        color: white;
+        padding: 12px 20px;
+        margin: -20px -20px 20px -20px;
+        border-radius: 5px 5px 0 0;
+        font-weight: bold;
+    }
+    
+    .skills {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 15px;
+        margin-top: 15px;
+    }
+    
+    .skills span {
+        background-color: #2a9d8f;
+        color: white;
+        padding: 8px 15px;
+        border-radius: 20px;
+        transition: all 0.3s ease;
+    }
+    
+    .skills span:hover {
+        background-color: #f4a261;
+        transform: translateY(-3px);
+        box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+    }
+    
+    ul {
+        padding-left: 20px;
+        list-style-type: none;
+    }
+    
+    ul li {
+        position: relative;
+        padding-left: 25px;
+        margin-bottom: 15px;
+    }
+    
+    ul li::before {
+        content: '▹';
+        position: absolute;
+        left: 0;
+        color: #f4a261;
+    }
+    
+    footer {
+        text-align: center;
+        padding: 20px;
+        background: #2a9d8f;
+        color: white;
+    }
+    
+    button {
+        display: block;
+        margin: 30px auto 10px;
+        padding: 12px 30px;
+        background: #e9c46a;
+        color: #264653;
+        border: none;
+        border-radius: 30px;
+        font-weight: bold;
+        cursor: pointer;
+        transition: all 0.3s ease;
+        box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+    
+    button:hover {
+        background: #f4a261;
+        transform: translateY(-3px);
+        box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+    }
+    
+    a {
+        text-decoration: none;
+        color: #2a9d8f;
+        font-weight: 500;
+        transition: all 0.2s ease;
+    }
+    
+    a:hover {
+        color: #e76f51;
+    }
+    
+    .section-content p {
+        margin: 15px 0;
+    }
+    
+    .section-content p span:first-child {
+        font-weight: 500;
+        color: #2a9d8f;
+        display: inline-block;
+        min-width: 80px;
+    }
+    
+    @media (max-width: 768px) {
+        .header {
+            flex-direction: column;
+            text-align: center;
+            padding: 200px;
+        }
+        
+        .header-content {
+            margin-top: 90px;
+        }
+        
+        .header hr {
+            margin: 20px auto;
+        }
+        
+        .container {
+            width: 90%;
+            padding: 20px;
+        }
+        
+        .skills {
+            justify-content: center;
+        }
+    }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <img src="biswas.jpg" alt="Profile Picture">
+        <div class="header-content">
+            <h1>Biswas Sigdel</h1>
+            <hr>
+            <p>Student</p>
+        </div>
+    </div>
+    <div class="container">
+        <div class="section">
+            <div class="section-title">About Me</div>            
+            <p>Hello! I'm <strong>Biswas Sigdel</strong>,</p>
+            <p>Currently studying at Kimpo University in South Korea, originally from Nepal. Passionate about web programming and always eager to learn and create.</p>
+        </div>
+        <div class="section">
+            <div class="section-title">Skills</div>
+            <div class="skills">
+                <span>HTML</span>          
+                <span>CSS</span>
+                <span>JavaScript</span>
+                <span>Python</span>
+            </div>
+        </div>
+        <div class="section">
+            <div class="section-title">Education</div>
+            <ul>
+                <li><strong>AI and Robotics</strong>, Kimpo University (2025 - Present)<br>
+                <small>Specialized in Web Development and Electronics and Sensors.</small></li>
+                <li><strong>Computer Science</strong>, St. Xavier's School (2022 - 2024)<br>
+                <small>Focused on Computer Science with a strong depth of knowledge in Physics and Chemistry.</small></li>
+            </ul>
+        </div>
+        <div class="section">
+            <div class="section-title">Contact</div>            
+            <div class="section-content">
+                <p><span>Email:</span> <a href="https://mail.google.com/mail/u/0/?tab=rm&ogbl#inbox" target="_blank">biswassigdel1@gmail.com</a></p>
+                <p><span>Phone:</span> <a href="tel:0104567890" target="_blank">(+82) 010-8257-7216</a></p>
+                <p><span>LinkedIn:</span> <a href="https://www.linkedin.com/in/biswas-sigdel-128010286/" target="_blank">Biswas Sigdel</a></p>
+                <p><span>Instagram:</span> <a href="https://www.instagram.com/biswassigdel07/?next=%2F" target="_blank">biswassigdel07</a></p>
+            </div>
+        </div>            
+        <button>Get In Touch</button>
+    </div>
+    <footer>
+        <p>&copy; 2025 Biswas Sigdel. All rights reserved.</p>
+    </footer>
+</body>
+</html>
