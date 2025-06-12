@@ -197,6 +197,28 @@
             justify-content: center;
         }
     }
+
+    /* Typewriter effect styles */
+    .typewriter {
+        border-right: 3px solid #2a9d8f;
+        white-space: nowrap;
+        overflow: hidden;
+        display: inline-block;
+    }
+
+    .typing {
+        animation: typing 3s steps(40, end), blink-caret .75s step-end infinite;
+    }
+
+    @keyframes typing {
+        from { width: 0 }
+        to { width: 100% }
+    }
+
+    @keyframes blink-caret {
+        from, to { border-color: transparent }
+        50% { border-color: #2a9d8f; }
+    }
     </style>
 </head>
 <body>
@@ -211,8 +233,8 @@
     <div class="container">
         <div class="section">
             <div class="section-title">About Me</div>            
-            <p>Hello! I'm <strong>Biswas Sigdel</strong>,</p>
-            <p>Currently studying at Kimpo University in South Korea, originally from Nepal. Passionate about web programming and always eager to learn and create.</p>
+            <p id="typewriter-text"></p>
+            <p id="second-paragraph" style="display:none;">Currently studying at Kimpo University in South Korea, originally from Nepal. Passionate about web programming and always eager to learn and create.</p>
         </div>
         <div class="section">
             <div class="section-title">Skills</div>
@@ -246,5 +268,36 @@
     <footer>
         <p>&copy; 2025 Biswas Sigdel. All rights reserved.</p>
     </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const text = "Hello! I'm Biswas Sigdel,";
+            const typewriterText = document.getElementById('typewriter-text');
+            const secondParagraph = document.getElementById('second-paragraph');
+            
+            // Add typewriter class initially
+            typewriterText.classList.add('typewriter');
+            
+            // Start typing animation
+            let i = 0;
+            function typeWriter() {
+                if (i < text.length) {
+                    typewriterText.innerHTML += text.charAt(i);
+                    i++;
+                    setTimeout(typeWriter, 100); // typing speed
+                } else {
+                    // Remove the cursor after typing is complete
+                    typewriterText.classList.remove('typewriter');
+                    // Show the second paragraph
+                    setTimeout(() => {
+                        secondParagraph.style.display = 'block';
+                    }, 500);
+                }
+            }
+            
+            // Start the animation after a slight delay
+            setTimeout(typeWriter, 1000);
+        });
+    </script>
 </body>
 </html>
